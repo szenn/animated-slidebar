@@ -1,0 +1,74 @@
+*{ box-sizing: border-box}
+
+#sidebar {
+    position: fixed;
+	z-index: 2;
+	overflow: auto;
+	top: 0px;
+	left: -250px;
+	width: 250px;
+	opacity: 0;
+	padding: 20px 0px;
+    height: 100%;
+    background-color: rgb(37, 37, 37);
+    transition: 250ms;
+}
+
+#sidebar.active {
+    opacity: 1;
+    left: 0px;
+}
+
+#item-container {
+    top: 6%;
+    position: relative;
+    margin-top: 40px;
+    height: 500px;
+}
+.items {
+    cursor: pointer;
+    padding: 10px 30px;
+    position: relative;
+    font-size: 2.1em;
+    color: white;
+}
+
+.items:hover {
+    background-color: rgb(168, 168, 168);
+    transition: 300ms;
+    padding:10px 45px;
+}
+
+#menubutton {
+    transition: 450ms;
+    cursor: pointer;
+    position: fixed;
+	z-index: 3;
+	top: 15px;
+	left: 15px;
+}
+
+#menubutton div {
+    transition: 250ms;
+    width: 35px;
+    height: 4px;
+    margin-bottom: 8px;
+    background-color: rgb(17, 17, 17);
+}
+#menubutton.active{
+    left: 200px;
+}
+
+#top.active {
+    transform: translate(1px , 8px) rotate(-135deg);
+    background-color: white;
+    
+}
+#middle.active{
+    opacity: 0;
+}
+
+#bottom.active{
+    background-color: white;
+    transform: translateY(-15px) rotate(-45deg);   
+}
